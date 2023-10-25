@@ -64,14 +64,14 @@ export function ActionBtn({
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="outline">
-          {ActionType === "EDIT" ? "Edit" : "Add"} Product
+        Create New Order
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>{ActionType}</DialogTitle>
+          <DialogTitle>{ActionType==="ADD"?"Create New Product":"Edit your Product"}</DialogTitle>
           <DialogDescription>
-            {ActionType === "EDIT" ? " Make changes to" : "Add"} your Product
+            {ActionType === "EDIT" ? " Make changes to" : "Create New Product"} your Product
             here. Click save when you're done.
           </DialogDescription>
         </DialogHeader>
@@ -136,13 +136,14 @@ export function ActionBtn({
               defaultValue="1"
               className="col-span-3"
               required
+              min={1}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 setQuantity(e.target.value);
               }}
             />
           </div>
           <DialogFooter>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit">Create New Order</Button>
             <DialogClose ref={closeRef}>Cancel</DialogClose>
           </DialogFooter>
         </form>
