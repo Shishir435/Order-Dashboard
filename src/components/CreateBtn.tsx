@@ -29,7 +29,7 @@ import { Order } from "@/types/orderTypes";
 const  CreateBtn=()=> {
   const [name, setName] = useState("Pedro Duarte");
   const [email, setEmail] = useState("test@test.com");
-  const [product, setProduct] = useState("Product1"); // Initialize product as an empty string
+  const [product, setProduct] = useState("Product1");
   const [quantity, setQuantity] = useState("1");
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const dispatch=useDispatch();
@@ -43,8 +43,8 @@ const  CreateBtn=()=> {
       product: product,
       quantity: Number(quantity),
     };
-    
-   dispatch(addOrder(newProduct))
+       dispatch(addOrder(newProduct))
+      //  code for dialog to close on save
         if (closeRef.current) {
       closeRef.current.click();
     }

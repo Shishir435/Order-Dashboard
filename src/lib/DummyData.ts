@@ -1,4 +1,4 @@
-const ProductData=[
+const OrderData=[
   {
     "id": "5e2940fdca9da1f010246d41",
     "customer_name": "Tillman Parker",
@@ -10137,4 +10137,4 @@ const ProductData=[
   }
 ]
 
-export default ProductData;
+export default OrderData;

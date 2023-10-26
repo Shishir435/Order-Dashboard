@@ -1,21 +1,9 @@
 import { createSlice, PayloadAction, nanoid } from "@reduxjs/toolkit";
-
-import ProductData from '@/lib/DummyData';
-
-interface Order {
-    id: string;
-    customer_name: string;
-    customer_email: string;
-    product: string;
-    quantity: number;
-}
-
-interface OrderState {
-    orders: Order[];
-}
+import OrderData from '@/lib/DummyData';
+import { Order, OrderState } from "@/types/orderTypes";
 
 const initialState: OrderState = {
-    orders: ProductData,
+    orders: OrderData,
 };
 
 export const orderSlice = createSlice({
@@ -46,5 +34,4 @@ export const orderSlice = createSlice({
 });
 
 export const { addOrder, removeOrder, editOrder } = orderSlice.actions;
-
 export default orderSlice.reducer;
