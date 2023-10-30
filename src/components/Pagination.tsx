@@ -45,7 +45,7 @@ const Pagination = ({
               key={index}
               onClick={() => paginate(index + 1)}
               className={`page-item cursor-pointer ${
-                currentPage === index + 1 ? "active bg-red-700" : "bg-gray-50"
+                currentPage === index + 1 ? "active bg-red-600" : "bg-gray-50"
               } ${buttonVariants({
                 variant: "outline",
               })}`}
